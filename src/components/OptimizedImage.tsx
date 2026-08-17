@@ -29,12 +29,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [currentSrc, setCurrentSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setCurrentSrc(src);
     setHasError(false);
-    setIsLoaded(false);
   }, [src]);
 
   const handleError = () => {
@@ -63,8 +61,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       // @ts-ignore
       fetchPriority={fetchPriority}
       referrerPolicy={referrerPolicy}
-      className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-90'}`}
-      onLoad={() => setIsLoaded(true)}
+      className={className}
       onError={handleError}
       {...props}
     />
