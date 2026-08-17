@@ -777,7 +777,7 @@ export default function App() {
               <div className="pt-1">
                 <p className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Puede pagar en su moneda local
+                  Puedes pagar en tu moneda local
                 </p>
               </div>
             </div>
