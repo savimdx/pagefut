@@ -29,18 +29,12 @@ import {
 // Custom components
 import HeaderBanner from './components/HeaderBanner';
 import OptimizedImage from './components/OptimizedImage';
-// @ts-ignore
-import heroFutsalImg from './assets/images/hero_futsal.webp';
-// @ts-ignore
-import packMetodologicoImg from './assets/images/pack_metodologico.webp';
-// @ts-ignore
-import sample1Img from './assets/images/sample_1.webp';
-// @ts-ignore
-import sample2Img from './assets/images/sample_2.webp';
-// @ts-ignore
-import sample3Img from './assets/images/sample_3.webp';
-// @ts-ignore
-import sample4Img from './assets/images/sample_4.webp';
+const heroFutsalImg = '/images/hero_futsal.webp';
+const packMetodologicoImg = '/images/pack_metodologico.webp';
+const sample1Img = '/images/sample_1.webp';
+const sample2Img = '/images/sample_2.webp';
+const sample3Img = '/images/sample_3.webp';
+const sample4Img = '/images/sample_4.webp';
 const PurchaseModal = lazy(() => import('./components/PurchaseModal'));
 const NotificationToast = lazy(() => import('./components/NotificationToast'));
 import { useCurrency } from './context/CurrencyContext';

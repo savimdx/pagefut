@@ -1,26 +1,15 @@
 import { BenefitItem, BonusItem, DrillItem, TestimonialItem, FAQItem } from './types';
-// @ts-ignore
-import ejerciciosAdicionalesImg from './assets/images/ejercicios_adicionales_futsal_1783515557260.webp';
-// @ts-ignore
-import bono1Img from './assets/images/bono_1.webp';
-// @ts-ignore
-import bono2Img from './assets/images/bono_2.webp';
-// @ts-ignore
-import bono3Img from './assets/images/bono_3.webp';
-// @ts-ignore
-import bono4Img from './assets/images/bono_4.webp';
-// @ts-ignore
-import bono5Img from './assets/images/bono_5.webp';
-// @ts-ignore
-import bono6Img from './assets/images/bono_6.webp';
-// @ts-ignore
-import bono7Img from './assets/images/bono_7.webp';
-// @ts-ignore
-import bono8Img from './assets/images/bono_8.webp';
-// @ts-ignore
-import bono9Img from './assets/images/bono_9.webp';
-// @ts-ignore
-import bono10Img from './assets/images/bono_10.webp';
+const ejerciciosAdicionalesImg = '/images/ejercicios_adicionales_futsal_1783515557260.webp';
+const bono1Img = '/images/bono_1.webp';
+const bono2Img = '/images/bono_2.webp';
+const bono3Img = '/images/bono_3.webp';
+const bono4Img = '/images/bono_4.webp';
+const bono5Img = '/images/bono_5.webp';
+const bono6Img = '/images/bono_6.webp';
+const bono7Img = '/images/bono_7.webp';
+const bono8Img = '/images/bono_8.webp';
+const bono9Img = '/images/bono_9.webp';
+const bono10Img = '/images/bono_10.webp';
 
 export const HERO_BULLETS = [
   "Más de 1000 sesiones listas para aplicar",
