@@ -127,45 +127,45 @@ export interface CurrencyContextProps {
 const CurrencyContext = createContext<CurrencyContextProps | undefined>(undefined);
 
 export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const originalPrice = 6.90;
-  const [currencyCode, setCurrencyCode] = useState<string>('USD');
+  const originalPrice = 7.28;
+  const [currencyCode, setCurrencyCode] = useState<string>('EUR');
   const [rate, setRate] = useState<number>(1);
   const [ratesCache, setRatesCache] = useState<Record<string, number>>(fallbackRates);
   const [isConverting, setIsConverting] = useState<boolean>(false);
-  const [detectedCountry, setDetectedCountry] = useState<string>('');
+  const [detectedCountry, setDetectedCountry] = useState<string>('ES');
 
-  // Formatter helper for USD currency with U$ symbol
-  const formatValue = (usdVal: number): string => {
+  // Formatter helper for EUR currency with € symbol at suffix: e.g. "7,28 €"
+  const formatValue = (val: number): string => {
     try {
-      const numFormatted = usdVal.toLocaleString('es-ES', {
-        minimumFractionDigits: usdVal % 1 === 0 ? 0 : 2,
+      const numFormatted = val.toLocaleString('es-ES', {
+        minimumFractionDigits: val % 1 === 0 ? 0 : 2,
         maximumFractionDigits: 2,
       });
-      return `U$${numFormatted}`;
+      return `${numFormatted} €`;
     } catch (e) {
-      return `U$${usdVal}`;
+      return `${val} €`;
     }
   };
 
   useEffect(() => {
-    setCurrencyCode('USD');
+    setCurrencyCode('EUR');
     setRate(1);
     setIsConverting(false);
   }, []);
 
   const setCurrency = (newCode: string) => {
-    // Keep fixed to USD
-    setCurrencyCode('USD');
+    // Keep fixed to EUR
+    setCurrencyCode('EUR');
     setRate(1);
   };
 
-  const convertAndFormat = (usdValue: number): string => {
-    return formatValue(usdValue);
+  const convertAndFormat = (val: number): string => {
+    return formatValue(val);
   };
 
-  const convertedPrice = originalPrice;
-  const currencySymbol = 'U$';
-  const formattedPrice = 'U$6,90';
+  const convertedPrice = 7.28;
+  const currencySymbol = '€';
+  const formattedPrice = '7,28 €';
 
   return (
     <CurrencyContext.Provider
